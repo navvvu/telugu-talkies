@@ -58,13 +58,17 @@ const LIST = [
     });
   
     // show results (or show "no results")
-    listEl.innerHTML = filtered.map(i => `
-      <article class="card">
-        <h3><a href="${i.url}" target="_blank" rel="noopener noreferrer">${i.title}</a></h3>
-        <p>${i.desc}</p>
-        ${(i.tags || []).map(t => `<span class="badge">${t}</span>`).join("")}
-      </article>
-    `).join("") || "<p>No results.</p>";
+    listEl.innerHTML = filtered.map(i => {
+      const hasYearTag = (i.tags || []).some(t => t === "book" || t === "magazine");
+      return `
+        <article class="card">
+          <h3><a href="${i.url}" target="_blank" rel="noopener noreferrer">${i.title}</a></h3>
+          <p>${i.desc}</p>
+          ${(i.tags || []).map(t => `<span class="badge">${t}</span>`).join("")}
+          ${hasYearTag && i.year ? `<span class="year">${i.year}</span>` : ""}
+        </article>
+      `;
+    }).join("") || "<p>No results.</p>";
   }
   
   // re-run render every time someone types
@@ -72,4 +76,3 @@ const LIST = [
   
   // first load
   render(LIST);
-  

@@ -6,6 +6,7 @@
     --color-muted:#6f6f6f;     /* Muted text */
     --color-accent:#89A896;    /* Cambridge blue (tags + titles) */
     --color-border:#CEB7B3;    /* Pale Dogwood */
+    --color-year:#8C5F66;      /* Year tags */
   
     /* type choices */
     --font-display: "DM Serif Display", serif;   /* page headings (telugu talkies) */
@@ -90,6 +91,17 @@
   .badge {
     display:inline-block;
     background:var(--color-accent);
+    color:#fff;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:.8rem;
+    margin:4px 6px 0 0;
+  }
+
+  /* year tags */
+  .year {
+    display:inline-block;
+    background:var(--color-year);
     color:#fff;
     padding:4px 10px;
     border-radius:20px;
