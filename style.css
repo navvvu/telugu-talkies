@@ -12,7 +12,6 @@
     --font-display: "DM Serif Display", serif;   /* page headings (telugu talkies) */
     --font-body: "Playfair Display", system-ui, sans-serif; /* everything else */
     --font-title: "Playfair Display";            /* item titles */
-    --font-badge: "Ubuntu", sans-serif;          /* tags + years */
   
     --radius:14px;
     --shadow:0 3px 12px rgba(0,0,0,.08);
@@ -97,7 +96,7 @@
     border-radius:20px;
     font-size:.8rem;
     margin:4px 6px 0 0;
-    font-family:var(--font-badge);
+    font-family:"Ubuntu", sans-serif;  /* force Ubuntu */
     letter-spacing:0.4px;
     text-transform:uppercase;
   }
@@ -111,7 +110,7 @@
     border-radius:20px;
     font-size:.8rem;
     margin:4px 6px 0 0;
-    font-family:var(--font-badge);
+    font-family:"Ubuntu", sans-serif;  /* force Ubuntu */
     letter-spacing:0.4px;
   }
   
