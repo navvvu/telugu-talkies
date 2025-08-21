@@ -1,42 +1,50 @@
 // content list (kept your wording/case exactly)
 const LIST = [
     {
-      title: "Ancient Indian Text (Telugu · Archive.org)",
+      title: "Telugu Manuscript (Digital Library of India)",
       url: "https://archive.org/details/dli.csl.8573/page/n77/mode/2up",
       tags: ["book", "archive", "telugu"],
-      desc: "Digitized Telugu manuscript from the Digital Library of India, preserved on Internet Archive."
+      desc: "Digitized Telugu manuscript from the Digital Library of India, hosted on Archive.org.",
+      year: null // unknown
     },
     {
-      title: "Ancient Indian Text (Telugu · Archive.org, Second Volume)",
+      title: "Telugu Manuscript — Volume II (Digital Library of India)",
       url: "https://archive.org/details/dli.csl.8311/page/n325/mode/2up",
       tags: ["book", "archive", "telugu"],
-      desc: "Another volume of a digitized Telugu text from the Digital Library of India."
+      desc: "Second volume of a Telugu text preserved in the DLI collection.",
+      year: null // unknown
     },
     {
-      title: "Chandamama Magazine (Telugu · April 1992)",
+      title: "Chandamama (Telugu) · April 1992",
       url: "https://archive.org/details/Chandamama/Chandamama1992April/",
       tags: ["magazine", "telugu", "archive"],
-      desc: "April 1992 issue of Chandamama Telugu magazine, digitized and hosted on Internet Archive."
+      desc: "April 1992 issue of the classic children’s magazine Chandamama in Telugu.",
+      year: 1992
     },
     {
       title: "FilmIndia Magazine · May 1939",
       url: "https://ia804508.us.archive.org/15/items/filmindia193905unse/filmindia193905unse.pdf",
       tags: ["magazine", "film", "1939"],
-      desc: "The May 1939 issue of *FilmIndia*, a pioneering Indian film magazine, available as a PDF."
+      desc: "Historic issue of FilmIndia from May 1939, available as a full PDF scan.",
+      year: 1939
     },
     {
-      title: "Indian Movie Posters (Letterform Archive)",
+      title: "Indian Film Posters (Letterform Archive)",
       url: "https://letterformarchive.org/news/indian-movie-posters/?srsltid=AfmBOop5YQQlDkyHhW_BpNsntKx5nEq5wIe4iCB5Sdtgcg7zDSe9hbEF",
       tags: ["posters", "cinema", "design"],
-      desc: "An article from Letterform Archive showcasing historic Indian movie posters and their design legacy."
+      desc: "Letterform Archive article featuring vintage Indian film posters and their design history.",
+      year: null // article, not tied to a single year
     },
     {
-      title: "Vintage Telugu Movie Posters (Reddit)",
+      title: "Vintage Telugu Posters (Reddit Thread)",
       url: "https://www.reddit.com/r/tollywood/comments/w4fu1v/a_collection_of_vintage_classic_telugu_movie/",
       tags: ["reddit", "telugu", "movies"],
-      desc: "A curated Reddit thread sharing vintage and classic Telugu movie stills, posters, and memorabilia."
+      desc: "Reddit community post compiling vintage Telugu movie posters and memorabilia.",
+      year: null // community collection
     }
   ];
+  
+  
   
   const listEl   = document.getElementById("list");
   const searchEl = document.getElementById("search");
