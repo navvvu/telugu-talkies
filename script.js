@@ -1,3 +1,4 @@
+// content list (kept your wording/case exactly)
 const LIST = [
     {
       title: "Ancient Indian Text (Telugu · Archive.org)",
@@ -37,29 +38,30 @@ const LIST = [
     }
   ];
   
-  const listEl = document.getElementById("list");
+  const listEl   = document.getElementById("list");
   const searchEl = document.getElementById("search");
   
+  // simple render
   function render(items) {
     const q = (searchEl.value || "").toLowerCase().trim();
-    const filtered = items.filter(i =>
-      (i.title + " " + i.desc + " " + i.tags.join(" ")).toLowerCase().includes(q)
-    );
   
-    listEl.innerHTML =
-      filtered
-        .map(
-          i => `
-        <article class="card">
-          <h3><a href="${i.url}" target="_blank" rel="noopener noreferrer">${i.title}</a></h3>
-          <p>${i.desc}</p>
-          ${(i.tags || []).map(t => `<span class="badge">${t}</span>`).join("")}
-        </article>
-      `
-        )
-        .join("") || "<p>No results.</p>";
+    const filtered = items.filter(i => {
+      const hay = (i.title + " " + i.desc + " " + (i.tags||[]).join(" ")).toLowerCase();
+      return !q || hay.includes(q);
+    });
+  
+    listEl.innerHTML = filtered.map(i => `
+      <article class="card">
+        <h3><a href="${i.url}" target="_blank" rel="noopener noreferrer">${i.title}</a></h3>
+        <p>${i.desc}</p>
+        ${(i.tags || []).map(t => `<span class="badge">${t}</span>`).join("")}
+      </article>
+    `).join("") || "<p>No results.</p>";
   }
   
-  searchEl.addEventListener("input", () => render(LIST));
+  // input -> render
+  searchEl.addEventListener("input", render.bind(null, LIST));
+  
+  // initial paint
   render(LIST);
-    
+  

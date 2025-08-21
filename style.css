@@ -7,12 +7,11 @@
     --color-accent:#89A896;    /* Cambridge blue (tags + titles) */
     --color-border:#CEB7B3;    /* Pale Dogwood */
   
-
+    /* Type */
     --font-display: "DM Serif Display", serif;   /* page headings (Telugu Talkies) */
     --font-body: "Playfair Display", system-ui, sans-serif; /* everything else */
     --font-title: "Playfair Display";            /* item titles */
-      
-      
+  
     --radius:14px;
     --shadow:0 3px 12px rgba(0,0,0,.08);
   }
@@ -51,6 +50,11 @@
     border-radius:14px;
     font-size:1rem;
     background:#fff;
+  }
+  #search:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,0,0,.06);
+    border-color:#00000050;
   }
   
   /* Cards */
@@ -109,4 +113,4 @@
     body { margin:20px auto; }
     .card { padding:16px; }
   }
-  
+    
