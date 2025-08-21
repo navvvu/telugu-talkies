@@ -4,20 +4,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>navvuthu</title>
+  <meta name="description" content="A small searchable scrapbook of Telugu magazines, film posters, and design archives." />
+
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=1" />
+
 </head>
 <body>
-  <header>
-    <h1> ♡ Telugu Talkies ♡</h1>
-    <p> It works! I hope lol try the search below </p>
-    <input id="search" type="search" placeholder="Type to filter…" />
-  </header>
+    <header>
+        <h1> ♡ Telugu Talkies ♡</h1>
+        <p> It works! I hope lol try the search below </p>
+        <label for="search" class="sr-only">Search</label>
+        <input id="search" type="search" placeholder="Type to filter…" />
+      </header>
+      
 
   <main id="list"></main>
 
@@ -25,6 +30,6 @@
     <small>Built with some ease some frustration • and HTML/CSS/JS</small>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=1"></script>
 </body>
 </html>
