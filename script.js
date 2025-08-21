@@ -68,7 +68,7 @@ const LIST = [
           ${hasYearTag && i.year ? `<span class="year">${i.year}</span>` : ""}
         </article>
       `;
-    }).join("") || "<p>No results.</p>";
+    }).join("") || "<p> sad times but nothing to see here </p>";
   }
   
   // re-run render every time someone types
