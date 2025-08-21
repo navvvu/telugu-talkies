@@ -1,25 +1,26 @@
 :root {
     /* palette */
-    --color-bg:#F7B2AD;        /* Melon */
-    --color-card:#FFFFFF;      /* White */
-    --color-text:#333232;      /* Jet */
-    --color-muted:#6f6f6f;     /* Muted text */
-    --color-accent:#89A896;    /* Cambridge blue (tags + titles) */
+    --color-bg:#F7B2AD;        /* Melon pink */
+    --color-card:#FFFFFF;      /* White (cards) */
+    --color-text:#333232;      /* Jet black */
+    --color-muted:#6f6f6f;     /* Grey muted */
+    --color-accent:#89A896;    /* Cambridge green/blue */
     --color-border:#CEB7B3;    /* Pale Dogwood */
-    --color-year:#8C5F66;      /* Year tags */
+    --color-year:#8C5F66;      /* Tiramisu (for year tags) */
   
-    /* type choices */
-    --font-display: "DM Serif Display", serif;   /* page headings (telugu talkies) */
-    --font-body: "Playfair Display", system-ui, sans-serif; /* everything else */
-    --font-title: "Playfair Display";            /* item titles */
-  
+    /* fonts */
+    --font-display:"DM Serif Display", serif;   
+    --font-body:"Playfair Display", system-ui, sans-serif; 
+    --font-title:"Playfair Display";            
+
     --radius:14px;
     --shadow:0 3px 12px rgba(0,0,0,.08);
-  }
-  
-  /* basic reset */
-  * { box-sizing:border-box; }
-  body {
+}
+
+/* reset */
+* { box-sizing:border-box; }
+
+body {
     margin:28px auto;
     max-width:960px;
     padding:0 16px;
@@ -28,118 +29,116 @@
     font-family:var(--font-body);
     line-height:1.55;
     -webkit-font-smoothing:antialiased;
-  }
-  
-  /* page headings */
-  h1,h2 {
+}
+
+/* headings */
+h1,h2 {
     font-family:var(--font-display);
-    color:var(--color-text);
     margin:0 0 .6em;
-  }
-  h1 {
+}
+h1 {
     font-size:clamp(32px,4vw,44px);
-    letter-spacing:0.5px;
     font-weight:600;
-  }
-  
-  /* search box */
-  #search {
+    letter-spacing:0.5px;
+}
+
+/* search box */
+#search {
     width:100%;
     padding:12px 14px;
     margin:14px 0 24px;
-    border:1px solid var(--color-border);
+    border:1px solid var(--color-border); /* dogwood */
     border-radius:14px;
     font-size:1rem;
     background:#fff;
-  }
-  #search:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0,0,0,.06);
-    border-color:#00000050;
-  }
-  
-  /* cards around each item */
-  .card {
+}
+#search:focus {
+    outline:none;
+    border-color:#00000050; /* lighter focus */
+    box-shadow:0 0 0 3px rgba(0,0,0,.06);
+}
+
+/* cards */
+.card {
     background:var(--color-card);
     border:1px solid var(--color-border);
     border-radius:var(--radius);
     padding:18px 22px;
     margin:16px 0;
     box-shadow:var(--shadow);
-  }
-  
-  /* item titles */
-  .card h3 { margin:0 0 6px; }
-  .card h3 a {
+}
+
+/* titles */
+.card h3 { margin:0 0 6px; }
+.card h3 a {
     font-family:var(--font-title);
-    color:var(--color-accent);
     font-size:1.3rem;
+    color:var(--color-accent); /* green */
     text-decoration:none;
-  }
-  .card h3 a:hover {
+}
+.card h3 a:hover {
     color:#6f9d8e; /* darker green */
     text-decoration:underline;
-  }
-  
-  /* description under each title */
-  .card p {
+}
+
+/* descriptions */
+.card p {
     margin:6px 0 10px;
     color:#2c2c2c;
-  }
-  
-  /* little tags (badges) */
-  .badge {
-    display:inline-block;
-    background:var(--color-accent);
-    color:#fff;
-    padding:4px 10px;
-    border-radius:20px;
-    font-size:.8rem;
-    margin:4px 6px 0 0;
-    font-family:"Ubuntu", sans-serif;  /* force Ubuntu */
-    letter-spacing:0.4px;
-    text-transform:uppercase;
-  }
+}
 
-  /* year tags */
-  .year {
+/* tags */
+.badge {
     display:inline-block;
-    background:var(--color-year);
+    background:var(--color-accent); /* same green */
     color:#fff;
     padding:4px 10px;
     border-radius:20px;
     font-size:.8rem;
     margin:4px 6px 0 0;
-    font-family:"Ubuntu", sans-serif;  /* force Ubuntu */
+    font-family:"Ubuntu", sans-serif;  
+    text-transform:uppercase;
     letter-spacing:0.4px;
-  }
-  
-  /* normal links outside cards */
-  a { color:#0b57d0; }
-  a:hover { text-decoration:underline; }
-  
-  /* footer text */
-  footer {
+}
+
+/* years */
+.year {
+    display:inline-block;
+    background:var(--color-year); /* tiramisu */
+    color:#fff;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:.8rem;
+    margin:4px 6px 0 0;
+    font-family:"Ubuntu", sans-serif;
+    letter-spacing:0.4px;
+}
+
+/* links */
+a { color:#0b57d0; /* google blue lol */ }
+a:hover { text-decoration:underline; }
+
+/* footer */
+footer {
     margin:22px 0 10px;
-    color:var(--color-muted);
     font-size:14px;
-  }
-  
-  /* tweaks for small screens */
-  @media (max-width:560px) {
+    color:var(--color-muted);
+}
+
+/* smaller screens */
+@media (max-width:560px) {
     body { margin:20px auto; }
     .card { padding:16px; }
-  }
+}
 
-  /* text hidden visually but available for screen readers */
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
+/* screen reader only */
+.sr-only {
+    position:absolute;
+    width:1px;
+    height:1px;
+    margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    border:0;
+    white-space:nowrap;
+}
