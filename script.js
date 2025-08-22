@@ -64,8 +64,10 @@ const LIST = [
         <article class="card">
           <h3><a href="${i.url}" target="_blank" rel="noopener noreferrer">${i.title}</a></h3>
           <p>${i.desc}</p>
-          ${(i.tags || []).map(t => `<span class="badge">${t}</span>`).join("")}
-          ${hasYearTag && i.year ? `<span class="year">${i.year}</span>` : ""}
+          <div class="meta">
+            ${(i.tags || []).map(t => `<span class="badge">${t}</span>`).join("")}
+            ${hasYearTag && i.year ? `<span class="year">${i.year}</span>` : ""}
+          </div>
         </article>
       `;
     }).join("") || "<p> sad times but nothing to see here </p>";

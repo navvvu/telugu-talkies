@@ -66,6 +66,8 @@ h1 {
     padding:18px 22px;
     margin:16px 0;
     box-shadow:var(--shadow);
+    /* lil softer shadow */
+    box-shadow:0 2px 10px rgba(0,0,0,.06);
 }
 
 /* titles */
@@ -75,6 +77,7 @@ h1 {
     font-size:1.3rem;
     color:var(--color-accent); /* green */
     text-decoration:none;
+    line-height:1.25; /* tighter title look */
 }
 .card h3 a:hover {
     color:#6f9d8e; /* darker green */
@@ -85,6 +88,14 @@ h1 {
 .card p {
     margin:6px 0 10px;
     color:#2c2c2c;
+}
+
+/* badges + year in a row */
+.meta {
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top:8px; /* space from desc */
 }
 
 /* tags */
@@ -115,7 +126,7 @@ h1 {
 }
 
 /* links */
-a { color:#0b57d0; /* google blue lol */ }
+a { color:#0b57d0; /*chase blue lol */ }
 a:hover { text-decoration:underline; }
 
 /* footer */
